@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laptop Store</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to the Laptop Store!</h1>
+    {{ if .IsLoggedIn }}
+    <a href="/logout">Log out</a>
+    <a href="/admin">Admin Panel</a>
+    <a href="/profile-edit">Profile Edit</a>
+    {{ else }}
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+    {{ end }}
+</header>
+
+<h2>Laptops:</h2>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Size</th>
+        <th>Price</th>
+    </tr>
+    {{range .Products}}
+    <tr>
+        <td>{{.ID}}</td>
+        <td>{{.Name}}</td>
+        <td>{{.Size}}</td>
+        <td>${{.Price}}</td>
+    </tr>
+    {{end}}
+</table>
+
+</body>
+</html>
