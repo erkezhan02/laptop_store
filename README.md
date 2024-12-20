@@ -15,7 +15,7 @@
   
 # How to use 🛠️  
 -  1. Make sure you have Go installed. If not, install Go.  
--  2. Clone the repository: git clone https://github.com/yourusername/laptop-store.git  
+-  2. Clone the repository: git clone https://github.com/erkezhan02/laptop_store 
 -  3. Change to the project directory: cd laptop-store  
 -  4. Run the application: go run main.go  
 -  5.  Open a web browser and navigate to http://localhost:8080
